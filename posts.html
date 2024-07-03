@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post Content</h1>
+        <div id="postContent"></div>
+        <button id="deleteButton" class="button">Delete Post</button>
+        <a href="index.html" class="button">Back to Posts</a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const postContentDiv = document.getElementById('postContent');
+            const deleteButton = document.getElementById('deleteButton');
+            const currentPost = JSON.parse(sessionStorage.getItem('currentPost'));
+
+            if (currentPost) {
+                const titleElement = document.createElement('h2');
+                titleElement.textContent = currentPost.title;
+
+                const contentElement = document.createElement('p');
+                contentElement.innerHTML = currentPost.content.replace(/<br>/g, '<br>'); // Preserve new lines
+
+                // Append title and content to postContentDiv
+                postContentDiv.appendChild(titleElement);
+                postContentDiv.appendChild(contentElement);
+
+                // Add event listener for delete button
+                deleteButton.addEventListener('click', () => {
+                    deleteCurrentPost();
+                });
+            } else {
+                // Handle case where no post is found in sessionStorage
+                postContentDiv.textContent = 'No post found.';
+            }
+
+            const deleteCurrentPost = () => {
+                const posts = JSON.parse(localStorage.getItem('posts')) || [];
+                const currentIndex = posts.findIndex(post => post.title === currentPost.title && post.content === currentPost.content);
+
+                if (currentIndex !== -1) {
+                    posts.splice(currentIndex, 1);
+                    localStorage.setItem('posts', JSON.stringify(posts));
+                    window.location.href = 'index.html'; // Redirect to index.html after deleting post
+                } else {
+                    alert('Post not found.');
+                }
+            };
+        });
+    </script>
+</body>
+</html>

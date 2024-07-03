@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c8f7d8;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    text-align: center;
+}
+
+h1 {
+    font-family: fantasy;
+    font-weight: 300;
+    font-style: unset;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.home-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.content-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #c8f7d8;
+    padding: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button, .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+    max-width: 500px;
+}
+
+form button:hover, .button:hover {
+    background: #0056b3;
+}
+
+.post {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.post h3 {
+    margin: 0 0 10px;
+}
+
+.post p {
+    margin: 0 0 10px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.post button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.post button:hover {
+    background: #c82333;
+}
+
+.empty-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#no-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+#posts {
+    text-align: center;
+}
+
+.button1 {
+    display: inline-block;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
