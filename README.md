@@ -12,3 +12,5 @@ Technologies Used:
 HTML: For structuring the web pages.
 CSS: For styling the pages and creating a responsive design.
 JavaScript: For handling form submissions, local storage, and dynamic content updates.
+
+And The Short Url : https://mahasblog.netlify.app/
